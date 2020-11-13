@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 00af98427d595aa86609001e58071548723dc76bafae52b42743c0036fc85863
+-- hash: 7eff1a70ad83c2777061bfbbe769fedb0ae0272a48fddf0691124b1be27f40e4
 
 name:           server
 version:        0.1.0.0
@@ -25,6 +25,11 @@ source-repository head
   location: https://github.com/githubuser/server
 
 library
+  exposed-modules:
+      Endpoints
+      FileLogic
+      LogRequest
+      Temp
   other-modules:
       Paths_server
   hs-source-dirs:
@@ -36,6 +41,7 @@ library
     , blaze-markup
     , bytestring
     , directory
+    , filepath
     , http-client
     , http-media
     , mtl
@@ -61,6 +67,7 @@ executable server-exe
     , blaze-markup
     , bytestring
     , directory
+    , filepath
     , http-client
     , http-media
     , mtl
@@ -88,6 +95,7 @@ test-suite server-test
     , blaze-markup
     , bytestring
     , directory
+    , filepath
     , hspec
     , hspec-wai
     , hspec-wai-json
