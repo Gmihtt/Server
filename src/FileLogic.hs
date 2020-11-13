@@ -27,7 +27,7 @@ get file = do
   exists <- liftIO . doesFileExist $ filePath file
   if exists
     then do
-      json <- liftIO (ByteString.readFile file)
+      json <- liftIO (ByteString.readFile (filePath file))
       let str = decode json :: Maybe Value
       return . fromMaybe "" $ str
     else throwError err404

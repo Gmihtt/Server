@@ -1,4 +1,5 @@
 .stack-work/
 files/
 var/
-str/Temp.hs
+src/Temp.hs
+hie.yaml
