@@ -6,10 +6,10 @@
 * make healthcheck - проверяет установлен ли docker
 * make clean - удаляет все файлы в папках files и var
 # Немного о содержание
-Этот сервер написан с помощью Haskell и веб-фреймворка servant https://www.servant.dev/
-Во время сборки докер уставливает stack https://docs.haskellstack.org/en/stable/README/
-После этого stack устанавливает зависимости необходимые для успешной работы сервера, в том числе servant
-При запуске docker run без каких либо команд, неявно запускается сервер `stack exec server-exe`
+Этот сервер написан с помощью Haskell и веб-фреймворка servant https://www.servant.dev/ .
+Во время сборки докер уставливает stack https://docs.haskellstack.org/en/stable/README/ .
+После этого stack устанавливает зависимости необходимые для успешной работы сервера, в том числе servant .
+При запуске docker run без каких либо команд, неявно запускается сервер `stack exec server-exe` .
 Чтобы запустить сервер вне контейнера необходимо:
 1. запустить `stack build`
 2. запустить `stack exec server-exe`
