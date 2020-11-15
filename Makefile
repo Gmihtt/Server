@@ -17,7 +17,7 @@ build: clean ./Dockerfile
 	sudo docker build -t gmihtt/server .
 
 start: ./Dockerfile
-	sudo docker run -p $(PORT) -it --name run-server --rm gmihtt/server
+	sudo docker run -dp $(PORT) -it --name run-server --rm gmihtt/server
 
 stop: ./Dockerfile
 	sudo docker stop run-server
